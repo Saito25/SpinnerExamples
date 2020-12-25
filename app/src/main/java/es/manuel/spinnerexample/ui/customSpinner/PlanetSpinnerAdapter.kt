@@ -5,14 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import es.manuel.spinnerexample.R
 import es.manuel.spinnerexample.data.entity.Planet
 import es.manuel.spinnerexample.databinding.SpinnerSelectedItemBinding
 
 
 class PlanetSpinnerAdapter(
     ctxt: Context,
-    private val resource: Int,
     private val planets: List<Planet>
 ) :
     ArrayAdapter<Planet>(ctxt, 0, planets) {
@@ -32,7 +30,7 @@ class PlanetSpinnerAdapter(
        val rowView = SpinnerSelectedItemBinding.inflate(layoutInflater, parent, false)
        val planet = planets[position]
        rowView.txtSpinnerSelectedItemKm.text = planet.order.toString()
-       rowView.txtSpinnerSelectedItemName.text = planet.name.toString()
+       rowView.txtSpinnerSelectedItemName.text = planet.name
        return rowView.root
    }
 }

@@ -24,7 +24,7 @@ class CustomSpinnerActivity : AppCompatActivity() {
 
     private fun setupViews() {
         binding.spnCustomSpinnerPlanets.adapter =
-            PlanetSpinnerAdapter(this, R.layout.spinner_selected_item, viewModel.planets)
+            PlanetSpinnerAdapter(this, viewModel.planets)
     }
 
 
