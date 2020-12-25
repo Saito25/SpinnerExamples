@@ -12,5 +12,11 @@ class PlanetSpinnerAdapter(val planets: List<Planet>, val ctxt: Context) :
 
     // TODO HACER
 
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        return super.getView(position, convertView, parent)
+    }
 
+    override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
+        return super.getDropDownView(position, convertView, parent)
+    }
 }
