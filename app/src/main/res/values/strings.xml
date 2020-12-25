@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">SpinnerExamples</string>
-    <string name="btn_main_show">Show</string>
+    <string name="btn_simple_spinner_show">Show</string>
+    <string name="main_simple_spinner">Simple Spinner</string>
+    <string name="main_complex_spinner">Complex Spinner</string>
+    <string name="main_custom_spinner">Custom Spinner</string>
+    <string name="complex_spinner_label">Planets</string>
+    <string name="main_planets">Planets</string>
+    <string name="complex_spinner_show">Show</string>
 </resources>

@@ -4,39 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/txtMainSpinnerLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin"
-        android:layout_marginTop="@dimen/margin"
-        android:text="Hello World!"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/spnMainPlanets"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin"
-        android:layout_marginEnd="@dimen/margin"
-        android:entries="@array/subjects"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/txtMainSpinnerLabel"
-        app:layout_constraintTop_toBottomOf="@+id/txtMainSpinnerLabel"
-        tools:listitem="@android:layout/simple_spinner_item" />
+    tools:context=".ui.main.ActivityMain">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnMainToSimpleSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin"
-        android:text="@string/btn_main_show"
+        android:text="@string/main_simple_spinner"
+        app:layout_constraintBottom_toTopOf="@+id/btnMainToComplexSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/btnMainToComplexSpinner"
+        app:layout_constraintStart_toStartOf="@+id/btnMainToComplexSpinner"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnMainToComplexSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_complex_spinner"
+        app:layout_constraintBottom_toTopOf="@+id/btnMainToCustomSpinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnMainPlanets" />
+        app:layout_constraintTop_toBottomOf="@+id/btnMainToSimpleSpinner" />
+
+    <Button
+        android:id="@+id/btnMainToCustomSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_custom_spinner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnMainToComplexSpinner"
+        app:layout_constraintStart_toStartOf="@+id/btnMainToComplexSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/btnMainToComplexSpinner" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SpinnerExamples">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.complexSpinner.ComplexSpinner"></activity>
+        <activity android:name=".ui.simpleSpinner.SimpleSpinnerActivity" />
+        <activity android:name=".ui.main.ActivityMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
