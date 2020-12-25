@@ -5,6 +5,7 @@ import android.os.Bundle
 import es.manuel.spinnerexample.ui.simpleSpinner.SimpleSpinnerActivity
 import es.manuel.spinnerexample.databinding.ActivityMainBinding
 import es.manuel.spinnerexample.ui.complexSpinner.ComplexSpinner
+import es.manuel.spinnerexample.ui.customSpinner.CustomSpinnerActivity
 
 class ActivityMain : AppCompatActivity() {
 
@@ -26,6 +27,10 @@ class ActivityMain : AppCompatActivity() {
         binding.btnMainToComplexSpinner.setOnClickListener {
             navigateToComplexSpinner()
         }
+
+        binding.btnMainToCustomSpinner.setOnClickListener {
+            navitgateToCustomSpinner()
+        }
     }
 
     private fun navigateToSimpleSpinner() {
@@ -36,5 +41,10 @@ class ActivityMain : AppCompatActivity() {
     private fun navigateToComplexSpinner() {
       val dataInent = ComplexSpinner.newIntent(this)
         startActivity(dataInent)
+    }
+
+    private fun navitgateToCustomSpinner() {
+        val dataIntent = CustomSpinnerActivity.newIntent(this)
+        startActivity(dataIntent)
     }
 }
