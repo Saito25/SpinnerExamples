@@ -8,11 +8,13 @@ import android.view.View
 import android.widget.AdapterView
 import com.google.android.material.snackbar.Snackbar
 import es.manuel.spinnerexample.databinding.ActivitySimpleSpinnerBinding
+import es.manuel.spinnerexample.utils.doOnItemSelected
 
 class SimpleSpinnerActivity : AppCompatActivity() {
     private val binding: ActivitySimpleSpinnerBinding by lazy {
         ActivitySimpleSpinnerBinding.inflate(layoutInflater)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -26,19 +28,7 @@ class SimpleSpinnerActivity : AppCompatActivity() {
     }
 
     private fun setupViewsOnStart() {
-        binding.spnSimpleSpinnerPlanets.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                showSnackBar()
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-            }
-        }
+        binding.spnSimpleSpinnerPlanets.doOnItemSelected { _, _, _, _ -> showSnackBar() }
     }
 
     private fun setupViews() {
